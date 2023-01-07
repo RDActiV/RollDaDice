@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RollDaDice</title>
+    <link rel="icon" href="images/dice.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="masterContainer">
+        <div id="homePage">
+            <div id="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div id="loginForm">
+                <h1 id="welcome">WELCOME!</h1>
+                <form id="ipUser" class="ipUser" >
+                    <h4>Create Username.</h4>
+                    <input id="usernameIp" type="text" name="username">
+                    <i class="fa fa-info-circle"></i><br>
+                    <button id="formSubmit" type="submit" value="submit" onclick="submit_form()"><i class="fa fa-check"></i></button>
+                </form>
+                    
+            </div>
+            
+        </div>
+        <div id="loaderScreen"></div>
+        <div id="gameScreen">
+            <div id="header">
+                <img src="images/logo.png" alt="">
+                <div id="userDisplay"><i class="fa fa-user"></i>
+                    <span id="userN">username</span></div>
+            </div>
+            <div id="container2">
+                <div id="scoreCont">
+                    <p class="scoreDis">YOUR <br><span class="scoretext">SCORE</span><br><span id="score">0</span></p>
+                </div>
+                <div id="rightCont">
+                    
+                    <div id="headCont2">
+                        <h1>ROLL-DA-DICE</h1>
+                    </div>
+                    <div id="timer">
+                        <h1><i class="fa fa-timer"></i> TIMER: <span id="countDown">20</span>s</h1>
+                    </div>
+                    <div id="dice_img"><img id="diceImg" src="images/1x/1.png" alt=""></div>
+                    <div id="buttonsAP">
+                        <button class="buttonAP" id="rollButton" type="text" onclick="rollAgain(); playAgain()">ROLL AGAIN <i class="fa fa-refresh"></i></button>
+                        <div id="afterGame">
+                            <button class="buttonAP" id="playAgainButton" type="submit" onclick="reset_fun()">PLAY AGAIN</button>
+                            <button class="buttonAP" id="newUserButton" type="submit" onclick="newuser()">NEW USER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
