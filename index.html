@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RollDaDice</title>
     <link rel="icon" href="images/dice.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_res.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -17,12 +19,13 @@
                 <form id="ipUser" class="ipUser" >
                     <h4>Create Username.</h4>
                     <input id="usernameIp" type="text" name="username">
-                    <i class="fa fa-info-circle"></i><br>
+                    <!-- <i class="fa fa-info-circle"></i> -->
+                    <div id="popup" class="popup">Username must be 4-15 characters long. Should not contain any special characters except _,@.</div>
+
                     <button id="formSubmit" type="submit" value="submit" onclick="submit_form()"><i class="fa fa-check"></i></button>
                 </form>
                     
             </div>
-            
         </div>
         <div id="loaderScreen"></div>
         <div id="gameScreen">
@@ -45,7 +48,7 @@
                     </div>
                     <div id="dice_img"><img id="diceImg" src="images/1x/1.png" alt=""></div>
                     <div id="buttonsAP">
-                        <button class="buttonAP" id="rollButton" type="text" onclick="rollAgain(); playAgain()">ROLL AGAIN <i class="fa fa-refresh"></i></button>
+                        <button class="buttonAP" id="rollButton" type="text" onclick="rollAgain(); playAgain()">ROLL DICE <i class="fa fa-refresh"></i></button>
                         <div id="afterGame">
                             <button class="buttonAP" id="playAgainButton" type="submit" onclick="reset_fun()">PLAY AGAIN</button>
                             <button class="buttonAP" id="newUserButton" type="submit" onclick="newuser()">NEW USER</button>

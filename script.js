@@ -1,26 +1,32 @@
-let username ="";
+
+let username = "";
 function submit_form(){
-    var format = /[\w\d\_\@]*/;
     const x = document.getElementById("usernameIp").value;
     event.preventDefault();
     username = x;
+    var popup = document.getElementById("popup");
+    let pattern = /[^a-z0-9\_\@]/gi;
+    
+    
+    
+    let lengthOK = false;
     let statusOK = false;
-    if (!format.test(username)){
-        statusOK = false;
+    if(username.length > 4 || username.length < 15){
+        lengthOK = true;
+        popup.style.opacity = "100%";
     }
-    if(x.length < 4 || x.length > 15){
-        statusOK = false;
-    }else{
+    
+    if(username.match(pattern)+false == 0){
         statusOK = true;
+        popup.style.opacity = "100%";
     }
-
-    if(statusOK == true){
+    
+    if(statusOK == true && lengthOK == true){
         document.getElementById("userN").innerHTML = username;
         document.getElementById("homePage").style.display = 'none';
     }
     
-} 
-console.log(username);
+}
 function genRanNum(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
