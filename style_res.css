@@ -1,5 +1,40 @@
 @media only screen and (max-width: 768px) {
     #container2{
-        flex-direction: row;
+        flex-direction: column;
+    }
+    #scoreCont{
+        width: 100%;
+        background: radial-gradient(circle at 50% 120%, wheat, crimson);
+        padding: 0;
+    }
+    .scoreDis{
+        padding: 20px;
+
+    }
+    #rightCont{
+        width: 99%;
+        height: 80%;
+        border-radius: 0 0 20px 20px;
+        border: 2px solid crimson;
+        border-top: unset ;
+    }
+    #diceImg{
+        transform: scale(0.6);
+    }
+    #dice_img>img{
+        margin: 0;
+    }
+    #loginForm{
+        transform: scale(0.7);
+    }
+    #buttonsAP{
+        transform: scale(0.7);
+    }
+    #afterGame{
+        margin-left: 52px;
+    }
+    #popup{
+        width: 70%;
+        font-size: 15px;
     }
   }

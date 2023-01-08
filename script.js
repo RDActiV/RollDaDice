@@ -11,8 +11,8 @@ function submit_form(){
     
     let lengthOK = false;
     let statusOK = false;
-    if(username.length > 4 || username.length < 15){
-        lengthOK = true;
+    if(username.length < 4 || username.length > 15){
+        lengthOK = false;
         popup.style.opacity = "100%";
     }
     

@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    
 }
 #masterContainer{
     position: relative;
@@ -10,9 +11,8 @@
 #homePage{
     position: absolute;
     height: 100vh;
-    width: 100vw;
-    z-index: 9;
-    
+    width: 100%;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,14 +118,14 @@
 #gameScreen{
     position: absolute;
     height: 100vh;
-    width: 100vw;
-    top: 0; 
+    width: 100%;
+
 }
 #header{
     display: flex;
     justify-content: space-between;
     padding: 10px 60px; ;
-    height: 50px;
+    height: 5%;
     background: rgba(0, 0, 0, 0.4);
 
 }
@@ -148,32 +148,30 @@
 }
 #container2{ 
     display: flex;
-    height: 700px;
-    width: 80vw;
     position: absolute;
-    top: 15%;
+    top: 17.5%;
     left: 10%;
-    
+    width: 80%;
+    height: 70%;
     border-radius: 20px;
     overflow: hidden;
 }
 #scoreCont{
     
-    
-    padding-top:30px ;
-    padding-left: 30px;
     width: 50%;
     background: radial-gradient(circle at -16% -16%, wheat, crimson);
-	
-	font-size: 30px;
+	font-size: 2vw;
     font-weight: 500;
-    place-items: center;
     text-align: center;
+    
+    
 
 }
 .scoreDis{
-    margin: 100px;
-    padding: 100px;
+    padding: 220px 0;
+    
+    
+    
     border-radius: 250px;
     /* box-shadow: 0 -2vmin 4vmin crimson inset, 0 1vmin 4vmin lightyellow inset,0 -2vmin 7vmin wheat inset;
     filter: drop-shadow(0 0 3vmin lightgoldenrodyellow) drop-shadow(0 5vmin 4vmin Orchid);
@@ -230,19 +228,21 @@
 	}
 }
 .scoretext{
-    font-size: 80px;
+    font-size: 5vw;
     text-decoration: dashed;
     text-decoration-line: underline; 
+    
     
 }
 #score{
 
-    font-size: 120px;
+    font-size: 5vw;
     color: wheat;
     
 }
 #rightCont{
-    
+    display: flex;
+    flex-direction: column;
     border: 2px solid crimson;
     border-left: 0;
     border-radius: 0 20px 20px 0;
@@ -251,14 +251,15 @@
 }
 #headCont2{
     text-align: center;
-    font-size: 40px;
+    
+    font-size: 2vw;
     border-bottom: 2px solid;
     
     color: crimson;
     background-color: wheat;
 }
 #timer{
-    padding: 20px;
+    padding: 20px 0;
     border-bottom: 2px solid crimson;
     text-align: center;
 }
@@ -270,7 +271,9 @@
 }
 #dice_img>img{
     height: 200px;
-    padding: 60px 0;
+    
+    max-width: 100%;
+    margin: 60px 0;
 }
 .buttonAP{
     width: 250px;
@@ -286,25 +289,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-
 }
 #rollButton{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    width: 400px;
+    margin-top: 22px;
 }
 .buttonAP:hover{
     color: rgb(247, 191, 89);
 }
 #playAgainButton{
-    margin-right: 25px;
+    
+    margin-top: 20px;
 }
 #newUserButton{
-    margin-left: 25px;
+    
+    margin-top: 20px;
 }
 #afterGame{
     
+    align-content: center;
 }
 .popup {
     
@@ -316,7 +318,7 @@
 
     z-index: 1;
     font-size: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     opacity: 0;
   }
  
