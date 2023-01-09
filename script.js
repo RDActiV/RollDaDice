@@ -95,7 +95,7 @@ function playAgain(){
             clearInterval(id_3);
         }else{
             console.log(id_3);
-            fun_display.style.display = 'block';
+            fun_display.style.display = 'flex';
             status = true;
         }
         

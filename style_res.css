@@ -1,10 +1,12 @@
 @media only screen and (max-width: 768px) {
     #container2{
-        flex-direction: column;
+        background: none;
+        flex-direction: column-reverse;
+        top: 15%;
     }
     #scoreCont{
         width: 100%;
-        background: radial-gradient(circle at 50% 120%, wheat, crimson);
+        background: radial-gradient(circle at 50% -30%, wheat, crimson);
         padding: 0;
     }
     .scoreDis{
@@ -14,9 +16,10 @@
     #rightCont{
         width: 99%;
         height: 80%;
-        border-radius: 0 0 20px 20px;
+        border-radius: 20px 20px 0px 0px;
+        
         border: 2px solid crimson;
-        border-top: unset ;
+        border-bottom: unset;
     }
     #diceImg{
         transform: scale(0.6);
@@ -29,12 +32,47 @@
     }
     #buttonsAP{
         transform: scale(0.7);
+        
+        
     }
     #afterGame{
-        margin-left: 52px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     #popup{
         width: 70%;
         font-size: 15px;
+    }
+    #headCont2{
+        font-size: 15px;
+    }
+    #timer>h1{
+        font-size: 25px;
+    }
+    #rollButton{
+        margin-top: 10px;
+    }
+    .scoreDis{
+        transform: scale(1.2);
+    }
+    #header>img{
+        display: none;
+    }
+    #header{
+        justify-content: center;
+    }
+    #userDisplay{
+        position: initial;
+        border-radius: 30px;
+        padding: 10px;
+        
+    }
+    #scoreCont{
+        border-radius: 0px 0px 20px 0;
+    }
+    #newUserButton{
+        margin-left: 0;
     }
   }
