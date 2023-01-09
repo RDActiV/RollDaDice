@@ -1,4 +1,4 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px ) {
     #container2{
         background: none;
         flex-direction: column-reverse;
@@ -22,7 +22,8 @@
         border-bottom: unset;
     }
     #diceImg{
-        transform: scale(0.6);
+        max-height: 80px;
+        padding: 10px 0 10px 0;
     }
     #dice_img>img{
         margin: 0;
@@ -31,7 +32,7 @@
         transform: scale(0.7);
     }
     #buttonsAP{
-        transform: scale(0.7);
+        transform: scale(0.6);
         
         
     }
@@ -49,7 +50,7 @@
         font-size: 15px;
     }
     #timer>h1{
-        font-size: 25px;
+        font-size: 20px;
     }
     #rollButton{
         margin-top: 10px;
