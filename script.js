@@ -61,11 +61,11 @@ function rollAgain(){
     if(!executed){
         timer();
     }
-    let id_2 = setInterval(btnDisable, 20000);
+    let id_2 = setTimeout(btnDisable, 20000);
     let status = false;
     function btnDisable(){
         if(status == true){
-            clearInterval(id_2);
+            clearTimeout(id_2);
         }else{
             console.log(id_2);
             document.getElementById("rollButton").disabled = true;
@@ -88,11 +88,11 @@ var fun_display = document.getElementById("afterGame");
 fun_display.style.display = 'none';
 
 function playAgain(){
-    let id_3 = setInterval(dis_fun, 20000);
+    let id_3 = setTimeout(dis_fun, 20000);
     let status = false;
     function dis_fun(){
         if(status == true){
-            clearInterval(id_3);
+            clearTimeout(id_3);
         }else{
             console.log(id_3);
             fun_display.style.display = 'flex';
