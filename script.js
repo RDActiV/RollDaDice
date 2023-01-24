@@ -39,55 +39,28 @@ function changeImg(randomNumber){
 }
 let executed = false;
 function timer(){
-    
+    executed = true;
     var time = document.getElementById("countDown");
 
     let timeleft = 20;
     let id = setInterval(dis,1000);
     function dis(){
         if(timeleft == 0){
+            document.getElementById("rollButton").disabled = true;
+            document.getElementById("rollButton").style.backgroundColor = 'gray';
             clearInterval(id);
         }else{
             time.innerHTML = timeleft-1;
             timeleft--;
         }
     }
-    executed = true
-}
-function rollAgain(){
-    const randomNumber = genRanNum(1,6);
-    changeImg(randomNumber);
-    scoreChg(randomNumber);
-    if(!executed){
-        timer();
-    }
-    let id_2 = setTimeout(btnDisable, 20000);
-    let status = false;
-    function btnDisable(){
-        if(status == true){
-            clearTimeout(id_2);
-        }else{
-            console.log(id_2);
-            document.getElementById("rollButton").disabled = true;
-            document.getElementById("rollButton").style.backgroundColor = 'gray';
-            status = true;
-        }
-    }
     
 }
-var score = 0;
-function scoreChg(num){
-    score+=num;
-    document.getElementById("score").innerHTML = score;
-}
-function timechange(time){
-    document.getElementById("countDown").innerHTML = time;
-}
-
 var fun_display = document.getElementById("afterGame");
 fun_display.style.display = 'none';
-
+let pGain = false;
 function playAgain(){
+    pGain = true;
     let id_3 = setTimeout(dis_fun, 20000);
     let status = false;
     function dis_fun(){
@@ -101,6 +74,30 @@ function playAgain(){
         
     }
 }
+function rollAgain(){
+    const randomNumber = genRanNum(1,6);
+    changeImg(randomNumber);
+    scoreChg(randomNumber);
+    if(!executed){
+        timer();
+    }
+    if(!pGain){
+        playAgain();
+    }
+}
+    
+var score = 0;
+function scoreChg(num){
+    score+=num;
+    document.getElementById("score").innerHTML = score;
+}
+function timechange(time){
+    document.getElementById("countDown").innerHTML = time;
+}
+
+
+
+
 function reset_fun(){
     document.getElementById("score").innerHTML = 0;
     document.getElementById("countDown").innerHTML = 20;
@@ -110,8 +107,8 @@ function reset_fun(){
     
     score = 0;
     executed = false;
-    document.getElementById("afterGame").style.display = 'none';
-    
+    fun_display.style.display = 'none';
+    pGain = false;
 
 }
 function newuser(){
